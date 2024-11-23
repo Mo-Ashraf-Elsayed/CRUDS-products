@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Bootstrap framework-->
+        <link rel="stylesheet" href="./style/bootstrap.min.css">
+        <!--My style-->
+        <link rel="stylesheet" href="./style/myStyle.css">
+        <title>CRUDS</title>
+        <!--Sweet Alert-->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body class="bg-dark">
+        <section class="container py-5">
+            <div class="name mb-2">
+                <label for="productName">Product Name:</label>
+                <input class="form-control" id="productName" type="text"
+                    name="productName">
+            </div>
+            <div class="price mb-2">
+                <label for="productPrice">Product Price:</label>
+                <input class="form-control" id="productPrice" type="text"
+                    name="productPrice">
+            </div>
+            <div class="category mb-2">
+                <label for="productCategory">Product Category:</label>
+                <input class="form-control" id="productCategory" type="text"
+                    name="productCategory">
+            </div>
+            <div class="describtion mb-2">
+                <label for="productDesc">Product Desc:</label>
+                <textarea class="form-control" name="productDesc"
+                    id="productDesc"></textarea>
+            </div>
+            <div class="submit mb-2">
+                <button id="addButton" class="btn btn-info"
+                    onclick="addProduct()">Add
+                    Product</button>
+            </div>
+            <div class="d-flex justify-content-center">
+                <input onkeyup="displayProduct()" id="search" class="form-check"
+                    type="text"
+                    placeholder="Search">
+            </div>
+        </section>
+        <table class="table table-dark container">
+            <thead>
+                <tr class="fw-bold">
+                    <td>Index</td>
+                    <td>Product Name</td>
+                    <td>Product Price</td>
+                    <td>Product Category</td>
+                    <td>Product Description</td>
+                    <td>Update</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tbody id="tBody">
+
+            </tbody>
+        </table>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/app.js"></script>
+    </body>
+</html>
